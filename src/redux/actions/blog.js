@@ -1,12 +1,12 @@
 import axios from 'axios' ;
-
+import { server } from '../store';
 export const createBlog = formdata => async dispatch =>{
     try {
         
         dispatch({ type :'createBlogRequest'});
 
         const { data } = await axios.post(
-            '/blog/create' , formdata ,{
+            `${server}/blog/create` , formdata ,{
                 headers :{
                     'Content-Type' : 'multipart/form-data'
                 },
@@ -33,7 +33,7 @@ export const myBlogs =()=> async dispatch =>{
         dispatch({ type: 'myBlogRequest' });
     
         const { data } = await axios.get(
-          '/blog/myblogs',
+          `${server}/blog/myblogs`,
         );
     
         dispatch({ type: 'myBlogSuccess', payload:  data.myblogs  });
@@ -58,7 +58,7 @@ export const allBlogs = (category ='' , keyword ='')=> async dispatch =>{
       dispatch({ type: 'allBlogRequest' });
   
       const { data } = await axios.get(
-        `/blog/all?keyword=${keyword}&category=${category}`,
+        `${server}/blog/all?keyword=${keyword}&category=${category}`,
       );
       console.log(data);
   
