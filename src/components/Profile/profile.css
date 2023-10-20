@@ -1,0 +1,50 @@
+.profile_card{
+    box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.2);
+    max-width: 30rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+.avtar{
+    background-color: #e8f0f3;
+    height: 60px;
+}
+h1{
+    margin-top: 2rem;
+}
+p{
+    margin-top: 1rem;
+}
+.email {
+    color: grey;
+    font-size: 18px;
+  }
+.btn{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 20px ;
+    justify-content: center;
+
+}
+
+button{
+    background-color:#0f98ce ;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .profile_card{
+        max-width: 16rem;
+        border-radius: 0%;
+        margin-top: 8rem;
+    }  
+    .btn{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        padding: 0rem 3rem;
+    }
+    .email{
+        font-size:16px ;
+    } 
+}
