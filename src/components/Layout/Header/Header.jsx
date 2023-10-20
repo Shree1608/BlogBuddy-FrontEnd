@@ -39,7 +39,7 @@ const Header = ({ isAuthenticated ,user }) => {
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerHeader borderBottomWidth={'1px'} >BlogMasterCMT</DrawerHeader>
+                        <DrawerHeader borderBottomWidth={'1px'} >BlogBuddy</DrawerHeader>
                         <DrawerBody>
                             <VStack alignItems={'flex-start'} spacing={4}>
                                 <Links onClose={onClose} url='/' title='Home' />
