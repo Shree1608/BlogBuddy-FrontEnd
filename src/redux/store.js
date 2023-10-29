@@ -2,10 +2,8 @@ import { configureStore} from '@reduxjs/toolkit';
 import { userResucer } from './reducers/userReducer';
 import { categoryReducer } from './reducers/categoryReducer';
 import thunk from 'redux-thunk';
-import dotEnv from 'dotenv' ;
 import { blogReducer } from './reducers/blogReducer';
-dotEnv.config();
-export const server = process.env.SERVER;
+export const server = "https://blog-buddy-backend.onrender.com/api/v1";
 
 const store = configureStore({
     reducer :{
