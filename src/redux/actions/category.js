@@ -7,7 +7,7 @@ export const createCategory = formdata => async dispatch =>{
         dispatch({ type :'createCatRequest'});
 
         const { data } = await axios.post(
-            `${server}/category/add` , formdata ,{
+            `/category/add` , formdata ,{
                 headers :{
                     'Content-Type' : 'multipart/form-data'
                 },
@@ -34,7 +34,7 @@ export const allCategory =()=> async dispatch =>{
         dispatch({ type: 'allCatRequest' });
     
         const { data } = await axios.get(
-          `${server}/category/all`,
+          `/category/all`,
         );
     
         dispatch({ type: 'allCatSuccess', payload: data.categories });

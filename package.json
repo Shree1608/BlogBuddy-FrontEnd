@@ -2,6 +2,7 @@
   "name": "front-end",
   "version": "0.1.0",
   "private": false,
+  "proxy" :"https://blog-buddy-backend.onrender.com/api/v1",
   "dependencies": {
     "@chakra-ui/react": "^2.8.1",
     "@emailjs/browser": "^3.11.0",

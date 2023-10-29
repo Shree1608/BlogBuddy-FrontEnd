@@ -6,7 +6,7 @@ export const createBlog = formdata => async dispatch =>{
         dispatch({ type :'createBlogRequest'});
 
         const { data } = await axios.post(
-            `${server}/blog/create` , formdata ,{
+            `/blog/create` , formdata ,{
                 headers :{
                     'Content-Type' : 'multipart/form-data'
                 },
@@ -33,7 +33,7 @@ export const myBlogs =()=> async dispatch =>{
         dispatch({ type: 'myBlogRequest' });
     
         const { data } = await axios.get(
-          `${server}/blog/myblogs`,
+          `/blog/myblogs`,
         );
     
         dispatch({ type: 'myBlogSuccess', payload:  data.myblogs  });
@@ -58,7 +58,7 @@ export const allBlogs = (category ='' , keyword ='')=> async dispatch =>{
       dispatch({ type: 'allBlogRequest' });
   
       const { data } = await axios.get(
-        `${server}/blog/all?keyword=${keyword}&category=${category}`,
+        `/blog/all?keyword=${keyword}&category=${category}`,
       );
       console.log(data);
   
