@@ -7,7 +7,7 @@ export const login = formdata => async dispatch => {
     dispatch({ type: 'loginRequest' });
 
     const { data } = await axios.post(
-      `/user/login`,
+      `${server}/user/login`,
       formdata,
       {
         headers: {
@@ -41,7 +41,7 @@ export const register = formData => async dispatch => {
     dispatch({ type: 'registerRequest' });
 
     const { data } = await axios.post(
-      `/user/register`, formData, {
+      `${server}/user/register`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
@@ -71,7 +71,7 @@ export const getMyProfile = () => async dispatch => {
     dispatch({ type: 'loadUserRequest' });
 
     const { data } = await axios.post(
-      `/user/me`,
+      `${server}/user/me`,
       {
         withCredentials: true,
       }
@@ -99,7 +99,7 @@ export const logout = () => async dispatch => {
     dispatch({ type: 'logoutRequest' });
 
     const { data } = await axios.post(
-      `/user/logout`,
+      `${server}/user/logout`,
       {
         withCredentials: true,
       }
